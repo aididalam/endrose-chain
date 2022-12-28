@@ -1,0 +1,25 @@
+{
+  "name": "endorse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "dev-test": "nodemon dev-test",
+    "start": "node ./App",
+    "dev": "nodemon ./App"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.3",
+    "express": "^3.21.2",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
