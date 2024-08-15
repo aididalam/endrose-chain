@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LostActivity">
+
+    <include
+        layout="@layout/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/idIVQrcode"
+                android:src="@drawable/asset_contract"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/viewFullTransaction"
+                    android:text="View Full History"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/getAsset"
+                    android:visibility="gone"
+                    android:layout_gravity="end"
+                    android:backgroundTint="#28a745"
+                    android:layout_marginLeft="5dp"
+                    android:text="+ Get Asset"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="8dp"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="14sp"
+                android:fontFamily="@font/df"
+                android:text="Name:"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="14sp"
+                android:fontFamily="@font/df"
+                android:id="@+id/name"
+                android:text="Loading..."/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="8dp"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="14sp"
+                android:fontFamily="@font/df"
+                android:text="ID:"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:textSize="14sp"
+                android:id="@+id/asset_id"
+                android:fontFamily="@font/df"
+                android:textColor="#0355FA"
+                android:text="Loading..."/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="8dp"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="14sp"
+                android:fontFamily="@font/df"
+                android:text="Description:"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_marginBottom="10dp"
+                   android:background="#CDC5C5"
+                   android:layout_height="wrap_content">
+                   <Spinner
+                       android:layout_width="match_parent"
+                       android:layout_height="30dp"
+                       android:padding="3dp"
+                       android:contentDescription="What happen to this asset"
+                       android:id="@+id/spinner"/>
+               </LinearLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:layout_height="150dp"
+                    android:textSize="14sp"
+                    android:gravity="start"
+                    android:hint="Enter description of this transfer or default description will apply"
+                    android:background="@drawable/border"
+                    android:id="@+id/description"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/requestTransfer"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#BF0C0C"
+            android:text="Request Mark as LOST/Consumed"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/warning"
+                android:visibility="gone"
+                android:fontFamily="@font/df"
+                android:text="A previous transfer request is already pending.Please sign the previous request"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        style="?android:attr/progressBarStyleLarge"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="#3F51B5"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout>

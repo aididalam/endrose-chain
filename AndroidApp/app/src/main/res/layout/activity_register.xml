@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.RegisterActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:gravity="center"
+       android:foregroundGravity="center"
+       android:layout_height="match_parent">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Register"
+           android:fontFamily="@font/df"
+           android:textSize="60sp"
+           android:textColor="#000"
+           android:gravity="center"
+           android:layout_marginBottom="20dp"
+           android:layout_gravity="center"/>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:paddingLeft="30dp"
+           android:paddingRight="30dp"
+           android:layout_marginBottom="100dp"
+           android:orientation="vertical">
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#000">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/edit_name"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="#fff"
+                   android:hint="Enter Your Name"
+                   android:inputType="text"/>
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:weightSum="10">
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="Select Type"
+                   android:layout_weight="3"/>
+
+               <Spinner
+                   android:id="@+id/type"
+                   android:layout_width="0dp"
+                   android:layout_weight="7"
+                   android:layout_height="60dp"
+                   android:contentDescription="Select who you are"
+                   android:spinnerMode="dropdown"/>
+           </LinearLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#000">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/edit_description"
+                   android:layout_width="match_parent"
+                   android:layout_height="120dp"
+                   android:background="#fff"
+                   android:hint="Please enter who you are"
+                   android:inputType="textMultiLine"/>
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#000">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/edit_email"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="#fff"
+                   android:hint="Enter Email"
+                   android:inputType="textEmailAddress"/>
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#000"
+               app:passwordToggleEnabled="true">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/edit_password"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="#fff"
+                   android:hint="Enter Password"
+                   android:inputType="textPassword"/>
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:backgroundTint="#000"
+               app:passwordToggleEnabled="true">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/edit_password_confirm"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="#fff"
+                   android:hint="Enter Confirm Password"
+                   android:inputType="textPassword"/>
+           </com.google.android.material.textfield.TextInputLayout>
+
+
+           <Button
+               android:layout_width="match_parent"
+               android:text="Register"
+               android:id="@+id/register"
+               android:layout_marginTop="30dp"
+               android:textFontWeight="700"
+               android:layout_height="wrap_content"/>
+
+
+       </LinearLayout>
+
+   </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        style="?android:attr/progressBarStyleLarge"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="#3F51B5"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

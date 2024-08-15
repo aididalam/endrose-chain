@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="HardcodedText">
+
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/add_asset"
+            android:title="Add Asset" />
+
+
+        <item
+            android:id="@+id/my_assets"
+            android:title="My Assets" />
+
+        <item
+            android:id="@+id/my_consumed_assets"
+            android:title="My Consumed Assets" />
+
+        <item
+            android:id="@+id/check_asset"
+            android:title="Scan Asset" />
+    </group>
+
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/pending_sign"
+            android:title="Pending Signature [TX]" />
+
+        <item
+            android:id="@+id/pending_asset_sign"
+            android:title="Pending Signature [A]" />
+    </group>
+
+   <group android:id="@+id/group3">
+       <item
+           android:id="@+id/profile"
+           android:title="Profile" />
+
+       <item
+           android:id="@+id/changePassword"
+           android:title="Change Password" />
+
+       <item
+           android:id="@+id/logout"
+           android:title="Logout" />
+   </group>
+
+</menu>

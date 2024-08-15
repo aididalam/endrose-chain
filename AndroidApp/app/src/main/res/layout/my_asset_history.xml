@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/cardLayout"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:weightSum="2"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/df"
+                    android:gravity="left"
+                    android:textSize="10sp"
+                    android:textFontWeight="800"
+                    android:text="On: "/>
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/df"
+                    android:gravity="left"
+                    android:textSize="10sp"
+                    android:text="2023-03-03 20:57:23"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:fontFamily="@font/df"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/df"
+                    android:gravity="left"
+                    android:textSize="10sp"
+                    android:textFontWeight="800"
+                    android:text="Event: "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:id="@+id/event"
+                    android:textSize="10sp"
+                    android:layout_gravity="right"
+                    android:text="Transfer"/>
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="16"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:textFontWeight="800"
+                android:fontFamily="@font/sofia"
+                android:text="From: "/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="12"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofia"
+                android:textColor="@color/blue"
+                android:id="@+id/sender"
+                android:text="Blockchain Wallet"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="16"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:textFontWeight="800"
+                android:fontFamily="@font/sofia"
+                android:text="To: "/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="12"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofia"
+                android:textColor="@color/blue"
+                android:id="@+id/receiver"
+                android:text="Blockchain Wallet"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="16"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:textFontWeight="800"
+                android:fontFamily="@font/sofia"
+                android:text="Amount: "/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="12"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofia"
+                android:textColor="@color/blue"
+                android:id="@+id/amount"
+                android:text="100 kg"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="16"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:textFontWeight="800"
+                android:fontFamily="@font/sofia"
+                android:text="Description: "/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="12"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofia"
+                android:textColor="@color/blue"
+                android:id="@+id/description"
+                android:text="Description"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:weightSum="16"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="wrap_content"
+                android:textFontWeight="800"
+                android:fontFamily="@font/sofia"
+                android:text="Nonce: "/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="12"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sofia"
+                android:id="@+id/nonceInfo"
+                android:textColor="@color/blue"
+                android:text="222"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Check this Transaction"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:id="@+id/checkTransaction"
+            android:backgroundTint="@color/white"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
